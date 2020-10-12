@@ -1,0 +1,29 @@
+# install deb packages
+sudo apt install fzf 
+sduo apt install git
+sudo apt install vim
+sudo apt install zsh
+sudo apt install ruby
+sudo apt install curl
+sudo apt install neofetch
+sudo apt install remmina 
+
+# install snap packages
+snap install chromium
+snap install slack
+
+# Zoom
+wget https://www.zoom.us/client/latest/zoom_amd64.deb
+sudo apt install ./zoom_amd64.deb 
+
+# Cisco Anyconnect VPN client
+download deb package:
+--> https://richmond.app.box.com/v/software-downloads/folder/45910432116/
+
+tar xf anyconnect-linux64-4.7.03052-predeploy-k9.tar.gz
+sudo apt install libpangox-1.0-0
+cd anyconnect-linux64-4.7.03052/vpn
+./vpn_install.sh
+
+start VPN client:
+--> /opt/cisco/anyconnect/bin/vpnui & 
