@@ -1,0 +1,118 @@
+## Ansible tuning
+-- see chapter 11 from Ansible Up & Running book
+
+how many forks? 5 is the default.
+memcapacity - number of forks driven by memory
+cpucapacity - number of forks driven by cpu capacity
+
+50 forks for 4GB RAM
+10 forks per 1GB RAM (rule of thumb)
+
+set forks in the job template
+
+ssh settings
+
+1. ControlPersist (aka ssh multiplexing)
+
+2. Streamline SSH connection options
+
+defaults to everything
+set up ssh args in ansible.cfg to use publickeys
+
+3. Enable SSH pipelining
+
+keeps the session open
+
+
+Yum calls are expensive
+use an array in the yum module name
+
+shell module calls are expensive
+use command if possible
+or replace shell calls with custom modules
+
+turn off gather_facts if possible
+
+Callback_whitelist = profile_tasks,timer
+
+use tags to break up a large playbook
+tags = install, config, check
+
+execution strategy: free vs serial
+increase ssh timeouts for remote connections
+increase prompt timeouts too.
+
+Tower 3.7.1 optimized inventory jobs
+
+-----------------------------------------------
+
+## Ansible Content
+
+changes with ansible 2.10
+
+content domains - linux, windows, network, cloud
+
+content = plugins, modules, roles, tests, docs, playbook snippets
+
+ansible 2.10 base (core components)
+-- about 300 core modules and plugins 
+
+ansible 2.10 content
+-- content collection
+-- full directory structure that contains all roles, modules, plugins, etc. that are needed for a playbook
+-- collections have their own versioning scheme
+-- collections are released out-of-tree with ansible base
+
+github locations
+2.9 ansible/ansible had everything
+2.10 - ansible/ansible - base
+2.10 - ansible/ansible-collections/* [+galaxy]
+2.10 - vendor/* [+galaxy]
+
+ansible-galaxy collection install foo.bar
+-- installs to ~/.ansible/collections/ansible_collections
+
+Galaxy             <---> Automation Hub
+galaxy.ansible.com <---> cloud.redhat.com
+community          <---> supported by RH
+
+advanced analytics with Tower is coming soon.
+
+Automation Hub - 53 collections
+
+-----------------------------------------------
+
+Molecule
+-- see chapter 13 from Ansible for DevOps book
+
+Set up Molecule
+-- playbook directory
+
+pip3 install molecule[docker]
+-- or pip3 install molecule[podman]
+
+molecule init scenario
+
+molecule/default/molecule.yml
+
+pip3 install yamllint
+pip3 install ansible-lint
+
+molecule/default/converge.yml
+- import_playbook: ../../main.yml
+
+molecule/default/verify.yml
+uri:
+  url: http://localhost/
+  status_code: 200
+
+molecule test
+molecule login
+
+GitHub Actions
+
+mkdir -p .github/workflows
+touch .github/ci.yml
+
+-----------------------------------------------
+
