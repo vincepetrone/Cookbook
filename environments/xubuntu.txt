@@ -11,6 +11,7 @@ sudo apt install remmina
 # install snap packages
 snap install chromium
 snap install slack
+snap install powershell
 
 # Zoom
 wget https://www.zoom.us/client/latest/zoom_amd64.deb
@@ -27,3 +28,11 @@ cd anyconnect-linux64-4.7.03052/vpn
 
 start VPN client:
 --> /opt/cisco/anyconnect/bin/vpnui & 
+
+# install powercli
+pwsh
+install-module VMware.PowerCLI -Scope CurrentUser
+Set-PowerCLIConfiguration -Scope User -ParticipateInCeip $false
+Set-PowerCLIConfiguration -Scope User -InvalidCertificateAction Ignore
+Set-PowerCLIConfiguration -Scope User -DisplayDeprecationWarnings $false
+
