@@ -18,16 +18,16 @@ wget https://www.zoom.us/client/latest/zoom_amd64.deb
 sudo apt install ./zoom_amd64.deb 
 
 # Cisco Anyconnect VPN client
-download deb package:
---> https://richmond.app.box.com/v/software-downloads/folder/45910432116/
+# download deb package:
+https://richmond.app.box.com/v/software-downloads/folder/45910432116/
 
 tar xf anyconnect-linux64-4.7.03052-predeploy-k9.tar.gz
 sudo apt install libpangox-1.0-0
 cd anyconnect-linux64-4.7.03052/vpn
 ./vpn_install.sh
 
-start VPN client:
---> /opt/cisco/anyconnect/bin/vpnui & 
+# start VPN client:
+/opt/cisco/anyconnect/bin/vpnui & 
 
 # install powercli
 pwsh
