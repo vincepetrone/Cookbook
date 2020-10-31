@@ -82,7 +82,7 @@ Automation Hub - 53 collections
 
 -----------------------------------------------
 
-Molecule
+## Molecule
 -- see chapter 13 from Ansible for DevOps book
 
 Set up Molecule
@@ -115,4 +115,101 @@ mkdir -p .github/workflows
 touch .github/ci.yml
 
 -----------------------------------------------
+
+## Future of "Automation Platform"
+
+Tower execution environments
+-- docker-based
+-- replaces python virtual environments
+
+Receptor
+-- overlay network
+-- automation mesh nodes
+
+Automation hub
+-- content repository
+
+K8s Operator for Tower
+-- deploy Tower to Openshift
+-- manage lifecycle (upgrades) Tower
+
+--------------------------------------
+
+### Vmware modules
+
+community.vmware 1.2
+-- pyvmomi (SOAP-based)
+-- 150 modules
+
+VMware REST API
+-- Automation SDK with language binding
+
+API explorer = http://vcenter/apiexplorer
+ 
+API services:
+-- appliance
+-- cis
+-- content
+-- esx
+-- vAPI
+-- vCenter
+-- vStats
+
+vmware.vmware_rest - modules based on the REST API
+
+-----------------------------------------
+
+Ansible Runner
+-- ansible-runner playbook test.yml
+
+-----------------------------------------
+
+what is contained in an execution environment?
+  - ansible-base
+  - ubi
+ 
+tools for execution env:
+
+ansible-builder - build execution env.
+ansible-runner - run execution env.
+
+ansible-runner run - foreground run attached to stdout
+ansible-runner start - background run
+ansible-runner is-alive - check status by pid
+
+playbook
+module execution
+direct role execution
+
+ansible 2.11 - argspec
+  - spec for a role
+  - set of defined variable types (int,str)
+
+
+  
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

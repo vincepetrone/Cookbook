@@ -1,0 +1,21 @@
+
+Powershell notes
+
+get-module psreadline
+install-module psreadline
+
+# array method - foreach
+@( (get-process).Name).foreach({if ($_ -eq "Xorg") {"$_"}})
+
+# string method - contains
+"hello world".contains("world")
+
+# string operator - match
+"hello world" -match "^he.*"
+
+# string operator - like
+"hello world" -like "hello*"
+
+
+
+
