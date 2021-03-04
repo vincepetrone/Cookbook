@@ -15,7 +15,3 @@ install-module psreadline
 
 # string operator - like
 "hello world" -like "hello*"
-
-
-
-
