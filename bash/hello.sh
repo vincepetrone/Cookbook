@@ -1,5 +1,5 @@
 #!/bin/bash
 
-read -p "What is your name? "
+name='Vinny'
 
-echo "Hello, ${REPLY}, nice to meet you here!"
+echo "Hello, ${name}, nice to meet you here!"
