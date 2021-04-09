@@ -11,5 +11,7 @@ declare -a vm_list=( $(cat ./vm_list.txt) )
 for srv in ${vm_list[@]} ; do
 	if govc snapshot.tree -vm $srv | grep -q "$snap_name" ; then      
 		echo $srv | tee -a $snap_file
+        else 
+  		echo "$srv - no snapshots"
 	fi
 done

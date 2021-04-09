@@ -7,8 +7,10 @@ DELAY=30
 snap_name="before-os-patch"
 active=no
 declare -a vm_list=(
-vincetest2
-vincetest3
+smcserv
+brutus
+pesto
+eldorado
 )
 
 for i in ${vm_list[@]} ; do
