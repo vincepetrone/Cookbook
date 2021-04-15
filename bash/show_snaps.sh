@@ -10,8 +10,9 @@ declare -a vm_list=( $(cat ./vm_list.txt) )
 >$snap_file
 for srv in ${vm_list[@]} ; do
 	if govc snapshot.tree -vm $srv | grep -q "$snap_name" ; then      
-		echo $srv | tee -a $snap_file
+		echo "$srv" >> $snap_file
+		printf "%-12s %s\n" $srv $snap_name
         else 
-  		echo "$srv - no snapshots"
+  		printf "%-12s %s\n" $srv NONE
 	fi
 done
