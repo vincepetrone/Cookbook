@@ -2,6 +2,7 @@ bosch
 brutus
 callback
 camelot
+canyon
 davis
 dcats
 dcatst
@@ -44,6 +45,7 @@ ragu
 smcserv
 sundial
 temptrak
+trek
 vincetest0
 vincetest1
 vincetest2
