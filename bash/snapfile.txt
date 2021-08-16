@@ -1,7 +1,0 @@
-ocpapp
-ocpdb
-ocpweb
-prego
-ragu
-sundial
-temptrak
