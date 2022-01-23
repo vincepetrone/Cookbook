@@ -9,7 +9,7 @@ sudo apt install neofetch
 sudo apt install remmina 
 
 # install snap packages
-snap install chromium
+# snap install chromium
 snap install slack
 snap install powershell
 
