@@ -1,2 +1,4 @@
 .venv
 .vagrant
+.latest
+.venv-ansible*
