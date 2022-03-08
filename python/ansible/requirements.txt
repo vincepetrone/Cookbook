@@ -1,4 +1,7 @@
-ansible==2.9.27
+wheel
+#ansible>=2.9,<2.10
+ansible>=5.0
 ansible-lint
 pyvmomi
 pywinrm
+#git+https://github.com/vmware/vsphere-automation-sdk-python.git
