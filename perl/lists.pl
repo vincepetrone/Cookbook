@@ -4,22 +4,23 @@ use v5.18;
 use warnings;
 
 my @array = qw( one two three );
+say foreach @array; printf "\n";
 
 push @array, qw( four five six );
+say foreach @array; printf "\n"; 
 
-say foreach @array;
+my $item = shift @array;
+say qq(pulled "$item" from array with shift function); printf "\n";
+say foreach @array; printf "\n";
 
-my $next = shift @array;
-say "after shift $next";
+unshift @array, qw( one );
+say qq(put "one" back at start of array with unshift function); printf "\n";
+say foreach @array; printf "\n";
 
-say foreach @array;
-unshift @array, qw( one oneone );
+push @array, qw( seven eight nine ten );
+say qq(put four more numbers at end of array with push function); printf "\n";
+say foreach @array; printf "\n";
 
-say foreach @array;
-
-say foreach @array;
-push @array, qw( seven eight );
-say foreach @array;
-
-pop @array;
+my $p = pop @array;
+say qq(pulled an item named "$p" from the end of the array with pop function); printf "\n";
 say foreach @array;
