@@ -1,5 +1,5 @@
 #ansible>=2.9,<2.10
-ansible>=5.0
+ansible
 ansible-lint
 pyvmomi
 pywinrm
