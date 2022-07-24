@@ -3,4 +3,5 @@ ansible
 ansible-lint
 pyvmomi
 pywinrm
+#rubrik_cdm
 #git+https://github.com/vmware/vsphere-automation-sdk-python.git
