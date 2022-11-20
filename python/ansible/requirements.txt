@@ -1,7 +1,8 @@
 #ansible>=2.9,<2.10
+#ansible-lint==5.4.0
 ansible
-ansible-lint
-pyvmomi
+#ansible-lint
 pywinrm
+#pyvmomi
 #rubrik_cdm
 #git+https://github.com/vmware/vsphere-automation-sdk-python.git
